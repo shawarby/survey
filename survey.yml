@@ -1,4 +1,9 @@
 - name: "Artifact URL of test results to Tower Workflows"
     set_stats:
       data:
-        integration_results_url:  "{{ (result.stdout|from_json).link }}"
+        datacenter: "{{ datacenter }}"
+        vm_name: "{{ vm_name }}"
+        vmcluster: "{{ vmcluster }}"
+        ip_addr: "{{ ip_addr }}"
+        net_mask: "{{ net_mask }}"
+        gate_way: "{{ gate_way }}"
